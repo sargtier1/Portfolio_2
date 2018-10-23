@@ -7,92 +7,99 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </head>
 <body>
     <!-- NAV BAR CODE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">About Me</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">portfolio<span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Salvatore Argentieri</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a id="about" class="nav-item nav-link" href="#">About Me</a>
+      <a id="port" class="nav-item nav-link" href="#">Portfolio</a>
+    </div>
+  </div>
+</nav>
+
+      <br>
 
     <!-- About me code -->
-    <div class="jumbotron">
-        <h1 class="display-4">Thanks for checking out my website!</h1>
-        <p class="lead"></p>
-        <hr class="my-4">
-        <div>
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-3">
-                      <img id="profile-pic" src="https://pbs.twimg.com/profile_images/967936140090265607/lnU1pAwr_400x400.jpg" />
-                  </div>
-           
-                  <div class="col-sm-9">
-                      <P>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum venenatis volutpat. Aliquam ac ante elit. Sed imperdiet ut nulla 
-                      </P>
-                  </div>
+  <div id="abouts">
+    <div class="container">
+        <div class="row">
+          <div class = "col-md-12">
+            <div class="jumbotron">
+                
+                    
+              <div class = "col-md-2">
+                  <img id="profile-pic" src="https://pbs.twimg.com/profile_images/967936140090265607/lnU1pAwr_200x200.jpg" />
+                </div>
+
+              <div class = "col-md-9">
+                  <p class="lead">Hello, and welcome! Thank you for checking out my portfolio website. I'm currently enrolled in a Full Stack Web Development course at SMU CAPE. This website is my showcase to the world! Below are the best and, most direct lines of contact for me. Currently I am familar with front-end techonologies (which is the main focus of this portfolio so far). Over the next few months I will be learning and mastering various back-end technologies as well, including making my first full stack web application!</p>
+                </div>
+
+                <hr class="my-4">
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="https://github.com/sargtier1" target="_blank" role="button">Github</a>
+                    <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/salvatore-argentieri-39a363146/" target="_blank" role="button">LinkedIn</a>
+                    <a class="btn btn-primary btn-lg" href="mailto:sarg.tier1@gmail.com" role="button">E-mail</a>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
-        <hr class="my-4">
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="https://github.com/sargtier1" target="_blank" role="button">Github</a>
-            <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/salvatore-argentieri-39a363146/" target="_blank" role="button">LinkedIn</a>
-            <a class="btn btn-primary btn-lg" href="<a href="mailto:sarg.tier1@gmail.com"  target="_blank" role="button">E-mail</a>
-        </p>
+      </div>
     </div>
 <!-- next part of the web page with portfolio -->
+    <br>
+  
 
+  <div id="projects">
 <!-- portfolio item one -->
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-4">
 
           <div class="card text-center">
             <div class="card-header">
               Pokedex
             </div>
             <div class="card-body">
-              <p class="card-text">This is my team's take on a Pokedex. We tried to incorporate a easy to use UI, that still had the feel of the original Gameboy games!</p>
-              <a href="https://crhodes92.github.io/PokedexRepo/" class="btn btn-dark" target="_blank" >Check out my Pokedex!</a>
+              <p id="pokedex" class="card-text">This is my team's take on a Pokedex. We tried to incorporate a easy to use UI, that still had the feel of the original Gameboy games!</p>
+              <a href="https://crhodes92.github.io/PokedexRepo/" class="btn btn-dark" target="_blank" >Pokedex!</a>
             </div>
           </div>
         </div>
 <!-- portfolio item two -->
-        <div class="col-sm">
+        <div class="col-sm-4">
 
             <div class="card text-center">
                 <div class="card-header">
                   Gif Search Engine
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="giphy">
                   <p class="card-text">I designed a Gif search engine. I selected the top ten searches from each category, and added additional features. Check it out to see what they are!</p>
-                  <a href="https://sargtier1.github.io/Giphy_project/" class="btn btn-dark" target="_blank">Gif search engine!</a>
+                  <a href="https://sargtier1.github.io/Giphy_project/" class="btn btn-dark" target="_blank">Gif Search Engine!</a>
                 </div>
               </div>
 
 
         </div>
 <!-- portfolio item three -->
-        <div class="col-sm">
+        <div class="col-sm-4">
           
             <div class="card text-center">
                 <div class="card-header">
                   Crystal Game
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="crystal">
                   <p class="card-text">A crystal game where a a gem is assigned a random value. figure out the values, and hit the number on the mark. Bust and you lose!</p>
                   <a href="https://sargtier1.github.io/Crystal_game/" class="btn btn-dark" target="_blank">Crystal Game!</a>
                 </div>
@@ -103,40 +110,30 @@
     </div>
 
 <br>
-
 <!-- portfolio item 4 -->
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-4">
 
             <div class="card text-center">
                 <div class="card-header">
                   Trivia Game
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="trivia">
                   <p class="card-text">Here I build a timed trivia game with everything dynamically genereated via JQuery!</p>
                   <a href="https://sargtier1.github.io/Trivia_game/" class="btn btn-dark" target="_blank">Trivia Game</a>
                 </div>
               </div>
         </div>
 
-<!-- portfolio item five -->
-
-        <div class="col-sm">
-          
-            
-
-
-        </div>
-
   <!-- portfolio item six -->
-        <div class="col-sm">
+        <div class="col-sm-4">
 
             <div class="card text-center">
                 <div class="card-header">
                   Hangman
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="hangman">
                   <p class="card-text">Classic Word Guess Game! Be aware, Websters elite only!</p>
                   <a href="https://sargtier1.github.io/Hangman_game/" class="btn btn-dark" target="_blank">Guess the Word!</a>
                 </div>
@@ -145,7 +142,7 @@
         </div>
       </div>
     </div>
-
+  </div>
 <br>
 
 </body>
